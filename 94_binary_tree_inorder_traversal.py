@@ -14,3 +14,8 @@ class Solution:
                 inOrder(node.right)
         inOrder(root)
         return result
+
+        # if not root:
+        #     return []
+
+        # return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
