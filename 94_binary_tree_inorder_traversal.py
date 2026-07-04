@@ -17,11 +17,8 @@ class Solution:
             else:
                 if not stack:
                     break
-
                 node = stack.pop()
-
                 inorder.append(node.val)
-
                 node = node.right
         return inorder
 
