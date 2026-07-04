@@ -8,7 +8,7 @@ from collections import deque
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         ans = []
-        if not root:
+        if root is None:
             return []
         
         q = deque([root])
