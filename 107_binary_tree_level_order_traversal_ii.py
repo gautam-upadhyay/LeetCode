@@ -9,7 +9,7 @@ class Solution:
     def levelOrderBottom(self, root: Optional[TreeNode]) -> List[List[int]]:
         ans = []
 
-        if not root:
+        if root is None:
             return []
 
         q = deque([root])
