@@ -22,4 +22,4 @@ class Solution:
                 right = mid
             else:
                 right -= 1
-        return nums[left]
+        return nums[left] #O(logn)
