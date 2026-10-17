@@ -6,13 +6,13 @@
 #         self.right = right
 class Solution:
     def maxLevelSum(self, root: TreeNode | None) -> int:
-        level_sums = {}
+        level_sum = {}
 
         def dfs(node, level):
             if not node:
                 return
-
-            level_sums[level] = level_sums.get(level, 0) + node.val
+            
+            level_sum[level] = level_sum.get(level, 0) + node.val
 
             dfs(node.left, level + 1)
             dfs(node.right, level + 1)
@@ -22,9 +22,9 @@ class Solution:
         max_sum = float('-inf')
         min_level = 1
 
-        for level in sorted(level_sums.keys()):
-            if level_sums[level] > max_sum:
-                max_sum = level_sums[level]
+        for level in sorted(level_sum.keys()):
+            if level_sum[level] > max_sum:
+                max_sum = level_sum[level]
                 min_level = level
 
         return min_level
